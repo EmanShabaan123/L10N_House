@@ -57,21 +57,27 @@
     .part1{
         background-color: azure;
         z-index: 4;
-        max-width: 380px;
+        padding: 30px;
+        max-width: 300px;
+        @include respond(350){
+            max-width: 300px;
+        }
+        @include respond(650){
+            max-width: 380px;
+        }
         .item{
-            
             max-width: 380px;
         @include respond(350){
-            max-width: 320px;
+            max-width: 300px;
         }
         @include respond(650){
             max-width: 380px;
         } 
         }
-
+       
         margin: auto;
         border-radius: 10px;
-        height: 360px;
+        height: 420px;
         .p1,.p2,.p3{
             height: 45px !important;
             min-height: 45px !important;
@@ -95,17 +101,25 @@
     .part2{
         background-color: azure;
         z-index: 4;
-        max-width: 380px;
+        padding: 30px;
+        max-width: 300px;
+        height: 420px;
+        @include respond(350){
+            max-width: 300px;
+        }
+        @include respond(850){
+            max-width: 380px;
+        }
         .item{
-            
             max-width: 380px;
         @include respond(350){
-            max-width: 320px;
+            max-width: 300px;
         }
         @include respond(650){
             max-width: 380px;
         } 
         }
+       
         margin: auto;
         border-radius: 10px;
         .c2{

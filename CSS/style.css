@@ -930,14 +930,25 @@ nav.navbar.scrolled {
 #Contact_Us .part1 {
   background-color: azure;
   z-index: 4;
-  max-width: 380px;
+  padding: 30px;
+  max-width: 300px;
+}
+@media (max-width: 1300px) {
+  #Contact_Us .part1 {
+    max-width: 300px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  #Contact_Us .part1 {
+    max-width: 380px;
+  }
 }
 #Contact_Us .part1 .item {
   max-width: 380px;
 }
 @media (max-width: 1300px) {
   #Contact_Us .part1 .item {
-    max-width: 320px;
+    max-width: 300px;
   }
 }
 @media (min-width: 769px) and (max-width: 1300px) {
@@ -948,7 +959,7 @@ nav.navbar.scrolled {
 #Contact_Us .part1 {
   margin: auto;
   border-radius: 10px;
-  height: 360px;
+  height: 420px;
 }
 #Contact_Us .part1 .p1, #Contact_Us .part1 .p2, #Contact_Us .part1 .p3 {
   height: 45px !important;
@@ -971,14 +982,26 @@ nav.navbar.scrolled {
 #Contact_Us .part2 {
   background-color: azure;
   z-index: 4;
-  max-width: 380px;
+  padding: 30px;
+  max-width: 300px;
+  height: 420px;
+}
+@media (max-width: 1300px) {
+  #Contact_Us .part2 {
+    max-width: 300px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  #Contact_Us .part2 {
+    max-width: 380px;
+  }
 }
 #Contact_Us .part2 .item {
   max-width: 380px;
 }
 @media (max-width: 1300px) {
   #Contact_Us .part2 .item {
-    max-width: 320px;
+    max-width: 300px;
   }
 }
 @media (min-width: 769px) and (max-width: 1300px) {
