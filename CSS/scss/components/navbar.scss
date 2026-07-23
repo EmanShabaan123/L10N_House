@@ -8,18 +8,28 @@ nav.navbar{
     @include position($p : fixed , $t : 0 , $l : 0);
         width: 100%;
     .navbar-brand {
-        
-        @include respond(350){
-            width: 100px;
+        img{
+            width: 135px;
+            height: auto; 
+             @include respond(350){
+            width: 120px;
         } @include respond(650){
-            width: 125px;
+            width: 135px;
+          
         }
+        }
+      
         transition-duration: 0.5s;
     }
     .navbar-nav{ 
-        background: #ADA996; 
+        @include respond(350){
+              background: #ADA996; 
         background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
         background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+        }
+       @include respond(850){
+          background: transparent;
+       }
         border-radius: 20px;
         padding: 10px;
         @include respond(850){

@@ -57,12 +57,18 @@
     .part1{
         background-color: azure;
         z-index: 4;
+        max-width: 380px;
+        .item{
+            
+            max-width: 380px;
         @include respond(350){
-            width: 320px;
+            max-width: 320px;
         }
         @include respond(650){
-            width: 380px;
+            max-width: 380px;
+        } 
         }
+
         margin: auto;
         border-radius: 10px;
         height: 360px;
@@ -89,11 +95,16 @@
     .part2{
         background-color: azure;
         z-index: 4;
+        max-width: 380px;
+        .item{
+            
+            max-width: 380px;
         @include respond(350){
-            width: 320px;
+            max-width: 320px;
         }
         @include respond(650){
-            width: 380px;
+            max-width: 380px;
+        } 
         }
         margin: auto;
         border-radius: 10px;

@@ -438,23 +438,36 @@ nav.navbar {
   left: 0;
   width: 100%;
 }
+nav.navbar .navbar-brand img {
+  width: 135px;
+  height: auto;
+}
 @media (max-width: 1300px) {
-  nav.navbar .navbar-brand {
-    width: 100px;
+  nav.navbar .navbar-brand img {
+    width: 120px;
   }
 }
 @media (min-width: 769px) and (max-width: 1300px) {
-  nav.navbar .navbar-brand {
-    width: 125px;
+  nav.navbar .navbar-brand img {
+    width: 135px;
   }
 }
 nav.navbar .navbar-brand {
   transition-duration: 0.5s;
 }
+@media (max-width: 1300px) {
+  nav.navbar .navbar-nav {
+    background: #ADA996;
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  nav.navbar .navbar-nav {
+    background: transparent;
+  }
+}
 nav.navbar .navbar-nav {
-  background: #ADA996;
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
   border-radius: 20px;
   padding: 10px;
 }
@@ -917,15 +930,19 @@ nav.navbar.scrolled {
 #Contact_Us .part1 {
   background-color: azure;
   z-index: 4;
+  max-width: 380px;
+}
+#Contact_Us .part1 .item {
+  max-width: 380px;
 }
 @media (max-width: 1300px) {
-  #Contact_Us .part1 {
-    width: 320px;
+  #Contact_Us .part1 .item {
+    max-width: 320px;
   }
 }
 @media (min-width: 769px) and (max-width: 1300px) {
-  #Contact_Us .part1 {
-    width: 380px;
+  #Contact_Us .part1 .item {
+    max-width: 380px;
   }
 }
 #Contact_Us .part1 {
@@ -954,15 +971,19 @@ nav.navbar.scrolled {
 #Contact_Us .part2 {
   background-color: azure;
   z-index: 4;
+  max-width: 380px;
+}
+#Contact_Us .part2 .item {
+  max-width: 380px;
 }
 @media (max-width: 1300px) {
-  #Contact_Us .part2 {
-    width: 320px;
+  #Contact_Us .part2 .item {
+    max-width: 320px;
   }
 }
 @media (min-width: 769px) and (max-width: 1300px) {
-  #Contact_Us .part2 {
-    width: 380px;
+  #Contact_Us .part2 .item {
+    max-width: 380px;
   }
 }
 #Contact_Us .part2 {
