@@ -279,7 +279,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/Images/images/back.jfif");
+  background-image: url("../Images/images/back.jfif");
   filter: blur(1.5px);
   z-index: -1;
 }
@@ -533,7 +533,7 @@ nav.navbar.scrolled {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/Images/images/back.jfif");
+  background-image: url("../Images/images/back.jfif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -590,7 +590,7 @@ nav.navbar.scrolled {
   width: 90%;
 }
 #Video {
-  background-image: url("../../../Images/images/video-bg.jpg");
+  background-image: url("../Images/images/video-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -634,7 +634,7 @@ nav.navbar.scrolled {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../../Images/images/back.jfif");
+  background-image: url("../Images/images/back.jfif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -696,19 +696,19 @@ nav.navbar.scrolled {
   transform: translate(-12px, 12px);
 }
 #Why_Us .part:nth-of-type(1) .item .box {
-  background-image: url(../../../Images/images/best.jpg);
+  background-image: url(../Images/images/best.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #Why_Us .part:nth-of-type(2) .item .box {
-  background-image: url(../../../Images/images/solutions.jpg);
+  background-image: url(../Images/images/solutions.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #Why_Us .part:nth-of-type(3) .item .box {
-  background-image: url(../../../Images/images/teamwork.jpg);
+  background-image: url(../Images/images/teamwork.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -759,7 +759,7 @@ nav.navbar.scrolled {
   width: 90%;
 }
 #Language_Sectors {
-  background-image: url("../../../Images/images/youth.jpg");
+  background-image: url("../Images/images/youth.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -809,7 +809,7 @@ nav.navbar.scrolled {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../../Images/images/back.jfif");
+  background-image: url("../Images/images/back.jfif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -858,7 +858,7 @@ nav.navbar.scrolled {
 
 #Contact_Us {
   overflow: hidden;
-  background-image: url("../../../Images/images/contact-bg.png");
+  background-image: url("../Images/images/contact-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
