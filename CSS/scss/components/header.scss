@@ -1,0 +1,132 @@
+@use "./../abstracts/" as * ;
+
+header{
+
+   
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    &::before{
+       content: " "; 
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-image: url("../../../Images/images/back.jfif");
+       filter: blur(1.5px);
+       z-index: -1;
+    }
+    .part1{
+        @include flex($jc : flex-start) ;
+        margin-top: 75px;
+        @include respond(1050){
+            margin-top: 0px;
+        }
+        h1{
+            font-size : 65px ;
+            @include respond(350){
+            font-size: 45px;
+        }
+        @include respond(850){
+            font-size: 65px;
+        }
+        }
+        i{
+            @include distance(45px , 45px) ;
+            background-color: transparent;
+            @include flex;
+            border-radius: 100%;
+            position: relative;
+            overflow: hidden;
+
+            &::before{
+            color: $firstColor;  
+            z-index: 5;       
+            transition-duration: 0.5s;       
+            }
+            &::after{
+                @include createEle($w :0% , $h :0%);
+                background-color: transparent;
+                border-radius: 100%;
+                @include position($p:absolute , $t :50% , $l :50%);
+                transform: translate(-50% , -50%);
+                transition-duration: 0.5s;
+            }
+            &:hover{
+                &::before{
+                    color: azure;
+                }
+                &::after{
+                width: 100%;
+                height: 100%;
+                background-color: $firstColor;  
+                               
+                }
+
+            }
+        }
+        
+    }
+    .part2{
+        @include flex($jc : flex-start);
+        
+        .item{
+            margin: auto;
+        }
+        img{
+            width: 280px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        @include respond(850){
+            img{
+               width: 420px; 
+               
+            }
+            
+        }
+    }    
+    .arrows{
+        @include position($b:10% , $l :50%);
+        transform : translate(-50%);
+        z-index: 5;
+        img{
+            width: 25px;
+            &:not(:first-child){
+                @include position ($t:0 , $l:0);
+            }
+            &:nth-of-type(1){
+                animation-name: animate1;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;
+            }
+            &:nth-of-type(2){
+                animation-name: animate2;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;
+
+            }
+            &:nth-of-type(3){
+                animation-name: animate3;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;               
+            }
+        }
+    }
+    >img{
+        width: 100%;
+        @include position($b : 0 , $l :0);
+        transform: rotateX(180deg);
+        z-index: 1;
+        bottom: -40px;
+        @include respond (650){
+            bottom: 0px;
+        }
+        background-size: cover;
+    }
+    .img-fluid{
+        max-width: 100%;
+        height: auto;
+    }
+}

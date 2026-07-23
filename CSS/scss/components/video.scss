@@ -1,0 +1,64 @@
+@use "./../abstracts/" as * ;
+#Video{
+    overflow: hidden;
+    height: 240px;
+    @include respond(650){
+        height: 285px;
+    }
+    .title{
+        h2{
+                width: fit-content;
+                margin: auto;
+                position: relative;
+                font-weight: 700;
+            &::after{
+                @include createEle($w : 25% , $h : 4px);
+                background-color: white;
+                border-radius: 10px;
+                @include position($b : -8px , $l : 50%);
+                transform : translateX(-50%);
+                transition-duration: 0.5s;
+
+            }
+        }
+    }
+    &:hover{
+        .title{
+            h2{
+                &::after{
+                    width: 90%;
+                }
+                
+            }
+        }
+    }
+
+
+
+    background-image: url("../../../Images/images/video-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before{
+        @include createEle() ;
+        background-color: rgba(4, 57, 107 ,0.8);
+        @include distance(100%,100%);
+        @include position($t:0,$l:0);
+    }
+
+    .container{
+        position: relative;
+    }
+    i{
+        cursor: pointer;
+        font-size: 80px;
+        transition-duration: 0.7s;
+        &:hover{
+           font-size: 100px;
+        }
+    }
+}
+

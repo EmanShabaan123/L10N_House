@@ -1,0 +1,14 @@
+@use "./../abstracts/" as * ;
+#About{
+    background-color: #FFFFFF;
+}
+#About {
+    .item {
+        p{
+            font-size: 14px;
+            @include respond(850){
+                  font-size: initial;
+            }
+        }
+    }
+}

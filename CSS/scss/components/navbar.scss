@@ -1,0 +1,76 @@
+@use "./../abstracts/" as * ;
+nav{
+    z-index: 100;
+    transition-duration: 0.5s;
+    
+}
+nav.navbar{
+    @include position($p : fixed , $t : 0 , $l : 0);
+        width: 100%;
+    .navbar-brand {
+        
+        @include respond(350){
+            width: 100px;
+        } @include respond(650){
+            width: 125px;
+        }
+        transition-duration: 0.5s;
+    }
+    .navbar-nav{ 
+        background: #ADA996; 
+        background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+        background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+        border-radius: 20px;
+        padding: 10px;
+        @include respond(850){
+            background: transparent;
+        }
+        .nav-item{
+           
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            margin-bottom: 15px;
+            .nav-link{
+                color: $firstColor;
+                font-weight: 700; 
+                position: relative;
+                padding: 0 !important;
+                display: inline-block;
+                width: fit-content;
+                
+                &::before{
+                position: absolute;
+                @include createEle($h:2.7px);
+                width: 0%;
+                left: 50%;
+                margin-top: 30px;
+                transform: translatex(-50%);
+                background-color: $secondColor;
+                transition-duration: 0.5s;
+                
+            }
+            &:hover ,
+            &.active{
+                &::before{
+                  transform:  translateX(-50%) ;
+                  width: 100%;
+                }
+            }
+            }
+           
+        }
+    }
+
+    &.scrolled{
+        background-color: rgb(246, 246, 246);
+        box-shadow: 6px 6px 6px rgb(186, 186, 186);
+        .navbar-brand {
+        @include respond(350){
+            width: 100px;
+        } @include respond(650){
+            width: 100px;
+        }
+    }
+    }
+}

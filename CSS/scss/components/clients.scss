@@ -1,0 +1,57 @@
+@use "./../abstracts/" as * ;
+#Client{
+    
+        position: relative;
+    &::before{
+       content: " "; 
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-image: url("../../../Images/images/back.jfif");
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       filter: blur(2px);
+       z-index: -1;
+    }
+   .owl-carousel {
+        img{
+           
+            @include respond (350){
+                width: 200px; 
+            }
+            @include respond (650){
+                width: 260px; 
+            }
+            margin: auto;
+        }
+        .owl-nav{
+            display: none !important;
+        }
+         .owl-dots{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 20px;
+            button.owl-dot{
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                span{
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    background-color: rgba(128, 89, 0, 0.6);
+                    border-radius: 100%;
+                    transition-duration: 0.5s;
+                 
+                }   &.active span{
+                        background-color: $secondColor;
+                    }
+            }
+        }
+   }
+}

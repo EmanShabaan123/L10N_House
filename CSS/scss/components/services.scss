@@ -1,0 +1,35 @@
+@use "./../abstracts/" as * ;
+#Services{
+    overflow: hidden;
+    position: relative;
+    &::before{
+       content: " "; 
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-image: url("../../../Images/images/back.jfif");
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       filter: blur(2.5px);
+       z-index: -1;
+    }
+    img{
+        width: 65px;
+    }
+    .box{
+        transition-duration: 0.5s;
+        width: 85%;
+        border: 2px solid #7e5b08;
+        background-color: rgb(242, 242, 242);
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+        margin: auto;
+        &:hover{
+           
+           transform: translateY(-30px);
+           box-shadow: 12px 12px 12px rgb(73, 73, 73);
+        }
+    }
+}

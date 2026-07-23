@@ -1,0 +1,79 @@
+@use "./../abstracts/" as * ;
+
+#Language_Sectors{
+    overflow: hidden;
+        height: 240px;
+    @include respond(650){
+        height: 285px;
+    }
+    .title{
+        h2{
+                width: fit-content;
+                margin: auto;
+                position: relative;
+                font-weight: 700;
+                font-size: 35px;
+                @include respond (350){
+                    font-size: 25px;
+                }
+                @include respond(450){
+                    font-size: 35px;
+                }
+            &::after{
+                @include createEle($w : 25% , $h : 4px);
+                background-color: white;
+                border-radius: 10px;
+                @include position($b : -8px , $l : 50%);
+                transform : translateX(-50%);
+                transition-duration: 0.5s;
+
+            }
+        }
+    }
+    &:hover{
+        .title{
+            h2{
+                &::after{
+                    width: 90%;
+                }
+                
+            }
+        }
+    }
+
+
+
+    background-image: url("../../../Images/images/youth.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before{
+        @include createEle() ;
+        background-color: rgba(4, 57, 107 ,0.8);
+        @include distance(100%,100%);
+        @include position($t:0,$l:0);
+    }
+
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        Button{
+            margin-inline: 12px;
+            padding: 10px 20px;
+            color: $secondColor;
+            background-color: azure;
+            z-index: 3;
+            border-radius: 17px;
+            border: none;
+            transition-duration: 0.5s;
+            &:hover{
+                transform: translateY(-5px);
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+@use "./../abstracts/" as * ;
+#Contact_Us{
+    overflow: hidden;
+    background-image: url("../../../Images/images/contact-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before{
+        @include createEle() ;
+        background-color: rgba(4, 57, 107 ,0.8);
+        @include distance(100%,100%);
+        @include position($t:0,$l:0);
+    }
+
+
+     .title{
+     position: relative;
+        h2{
+                color: white;
+                width: fit-content;
+                margin: auto;
+                position: relative;
+                font-weight: 700;
+            &::after{
+                @include createEle($w : 25% , $h : 4px);
+                background-color: white;
+                border-radius: 10px;
+                @include position($b : -8px , $l : 50%);
+                transform : translateX(-50%);
+                transition-duration: 0.5s;
+
+            }
+        }
+        h6{
+            color: white;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 4;
+        }
+    }
+    &:hover{
+        .title{
+            h2{
+                &::after{
+                    width: 90%;
+                }
+                
+            }
+        }
+    }
+
+
+    .part1{
+        background-color: azure;
+        z-index: 4;
+        @include respond(350){
+            width: 320px;
+        }
+        @include respond(650){
+            width: 380px;
+        }
+        margin: auto;
+        border-radius: 10px;
+        height: 360px;
+        .p1,.p2,.p3{
+            height: 45px !important;
+            min-height: 45px !important;
+            align-items: center;
+        }
+        .m{
+            margin-top: -13px !important;
+            resize: none;
+            color: rgb(146, 146, 146);
+        }
+        button{
+            padding: 10px;
+            border-radius: 15px;
+            color: azure;
+            background-color: $firstColor;
+            border: none;
+            width: 150px;
+        }
+    }
+
+    .part2{
+        background-color: azure;
+        z-index: 4;
+        @include respond(350){
+            width: 320px;
+        }
+        @include respond(650){
+            width: 380px;
+        }
+        margin: auto;
+        border-radius: 10px;
+        .c2{
+            font-size: 22px;
+            color: $firstColor;
+            padding-left: 25px;
+        }
+        .block{
+              display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+            a{
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                &:nth-child(1){
+                   background-color: darkolivegreen;
+                }
+                 &:nth-child(2){
+                   background-color: #C52661;
+                }
+                 &:nth-child(3){
+                   background-color: darkslateblue;
+                }
+                i{
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+
+}
